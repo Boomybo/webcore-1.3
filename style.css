@@ -31,6 +31,10 @@ button {
     cursor: pointer;
 }
 
+li {
+    list-style-type: none;
+}
+
 .post-content__button {
     border: 0;
     background: transparent;
@@ -73,9 +77,33 @@ button {
     .header-menu {
         height: 88px;
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
     }
+
+    .header-menu__burger-button {
+        margin: 0 16px;
+    }
+
+    .header-menu__application-button{
+        margin-left: auto;
+    }
+
+    .header-menu__status-button{
+        margin: 0 16px;
+    }
+
+    .header-menu__logo-link::after {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 32px;
+        border-radius: 1px;
+        background: #EAEAEA;
+        position: relative;
+        top: -5px;
+        margin-left: 16px;
+    }
+
     .main-content {
         background-color: #F8F8F8;
         border-top: 1px solid #D9FFF5;;
@@ -113,7 +141,6 @@ button {
         font-size: 16px;
         line-height: 24px;
         border: 2px solid #F8F8F8;
-        list-style-type: none;
     }
 
     .main-menu__item:hover {
@@ -167,8 +194,21 @@ button {
         margin-left: 20px;
         margin-right: 4px;
     }
+    
+    .header-menu__burger-button::after {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 32px;
+        border-radius: 1px;
+        background: #EAEAEA;
+        position: relative;
+        left: 14px;
+    }
 
-    .header-menu__icon, .header-menu-tablet__icon {
+    .header-menu__application-button,
+    .header-menu__status-button,
+    .header-menu-tablet__button {
         margin-left: 16px;
     }
 
@@ -185,7 +225,7 @@ button {
         margin-right: auto;
     }
 
-    .header-menu__icon-last {
+    .header-menu__status-button {
         margin-right: 40px;
     }
 
@@ -301,12 +341,14 @@ button {
         margin-right: 30px;
     }
 
-    .header-menu__button {
+    .header-menu__application-button,
+    .header-menu__status-button {
         font-family: "TT Lakes regular";
         font-size: 16px;
         line-height: 24px;
         display: flex;
         align-items: center;
+        margin-right: 24px;
     }
 
     .header-menu__application-button--disabled, 
@@ -316,7 +358,6 @@ button {
 
     .header-menu__icon {
         align-self: center;
-        margin-right: 32px;
     }
 
     .main-content{
